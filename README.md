@@ -4,7 +4,7 @@ Unofficial LineageOS 23.2 for Xiaomi Mi8937. Initial phone testing is on Redmi 4
 
 ## Downloads
 
-Release asset upload is pending. No installable ROM ZIPs are currently published in this repository.
+The initial ROM packages and standalone recovery are available in the [published release](https://github.com/unicastbg/mi8937-builds/releases/tag/mi8937-23.2-20261008).
 
 Use the assets in [Releases](https://github.com/unicastbg/mi8937-builds/releases). GitHub's Source code archives are not ROM packages.
 
