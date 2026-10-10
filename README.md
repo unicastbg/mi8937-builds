@@ -32,7 +32,7 @@ Official recovery may show error 21 for our unfamiliar signing certificate durin
 
 The owner reports migration boot and normal installation with status 0 and no data loss on one Redmi 4X. Other Mi8937 models, hardware functions and add-ons are not comprehensively validated. Google Apps, microG and Magisk preservation are not yet confirmed. Keep backups; data preservation is not guaranteed.
 
-The normal ROM points Updater to a [separate Mi8937 feed](https://unicastbg.github.io/mi439-ota/Mi8937-23.2.json), hosted in the existing OTA repository. It now lists the October normal ROM. Automatic OTA on Redmi 4X has not yet been phone-tested. Once validated, future normal releases will use Updater without repeating migration.
+The normal ROM points Updater to a [separate Mi8937 feed](https://unicastbg.github.io/mi439-ota/Mi8937-23.2.json), hosted in the existing OTA repository. It now lists the October normal ROM. The October normal ROM was installed through Updater on one Redmi 4X; the owner reports a successful OTA, working phone and no data loss. Future normal releases use Updater without repeating migration.
 
 Packaging checks passed for ZIP integrity, whole-file OTA signatures, APEX signatures, duplicate-free trusted recovery certificates, recovery installation and absence of an OTA wipe request. Mi8937 upstream disables AVB; no claim of AVB protection is made.
 
