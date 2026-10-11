@@ -17,7 +17,7 @@ Never install Mi439 packages on these devices.
 
 ## Migration From Official LineageOS 23.2
 
-Back up important data first. These instructions are for an existing official 23.2 installation, not stock MIUI or an older Android release. Install Android Platform Tools on the computer, enable USB debugging on the phone, authorize the computer, and put both downloaded ZIPs in the directory where you run the commands. If ADB is unavailable, enter recovery with the phone's hardware keys and start at step 2.
+Back up important data first. These instructions are for an existing official 23.2 installation, not stock MIUI or an older Android release. Install Android Platform Tools on the computer, enable USB debugging on the phone, authorize the computer, and put both downloaded ZIPs in the directory where you run the commands. If USB debugging is unavailable, enter recovery with the phone's hardware keys; ADB on the computer is still required to sideload the ZIPs.
 
 1. With the phone booted and connected by USB, check the connection and enter recovery:
 
