@@ -17,12 +17,44 @@ Never install Mi439 packages on these devices.
 
 ## Migration From Official LineageOS 23.2
 
-Back up important data first. These instructions are for an existing official 23.2 installation, not stock MIUI or an older Android release.
+Back up important data first. These instructions are for an existing official 23.2 installation, not stock MIUI or an older Android release. Install Android Platform Tools on the computer, enable USB debugging on the phone, authorize the computer, and put both downloaded ZIPs in the directory where you run the commands. If ADB is unavailable, enter recovery with the phone's hardware keys and start at step 2.
 
-1. In recovery, select Apply update > Apply from ADB and sideload the migration ZIP.
-2. Wait for status 0, boot Android once and confirm your apps and files are present.
-3. Promptly return to recovery and sideload the normal ZIP.
-4. Wait for status 0, then reboot Android.
+1. With the phone booted and connected by USB, check the connection and enter recovery:
+
+   ```sh
+   adb devices
+   adb reboot recovery
+   ```
+
+2. In recovery, select **Apply update > Apply from ADB**, then run:
+
+   ```sh
+   adb sideload lineage-23.2-20261008-UNOFFICIAL-Mi8937-migration.zip
+   ```
+
+3. Wait for final install status 0. Reboot to Android once and confirm your apps and files are present. After Android has fully booted and ADB is available again, return to recovery:
+
+   ```sh
+   adb reboot recovery
+   ```
+
+4. Select **Apply update > Apply from ADB** again, then install the latest normal ROM:
+
+   ```sh
+   adb sideload lineage-23.2-20261010-UNOFFICIAL-Mi8937.zip
+   ```
+
+5. Wait for final install status 0, then select **Reboot system now** in recovery. The normal ROM installs community recovery for future updates.
+
+### Already On A Community Normal Build
+
+Do **not** repeat migration. For a manual update, boot recovery with `adb reboot recovery`, select **Apply update > Apply from ADB**, then run:
+
+```sh
+adb sideload lineage-23.2-20261010-UNOFFICIAL-Mi8937.zip
+```
+
+Wait for status 0 and select **Reboot system now**. You can also use the built-in Updater for OTA releases.
 
 Do not wipe or format data, unlock/relock the bootloader or repeat migration on an existing community normal build. Migration temporarily relaxes package-signature checks; the normal ROM removes that code and installs community recovery.
 
