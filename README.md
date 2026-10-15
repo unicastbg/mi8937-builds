@@ -4,12 +4,12 @@ Unofficial LineageOS 23.2 for Xiaomi Mi8937. Initial phone testing is on Redmi 4
 
 ## Downloads
 
-The [latest normal ROM and standalone recovery](https://github.com/unicastbg/mi8937-builds/releases/tag/mi8937-23.2-20261010) are in the October release. The [initial release](https://github.com/unicastbg/mi8937-builds/releases/tag/mi8937-23.2-20261008) retains the one-time migration ZIP for phones still on official LineageOS 23.2.
+The [latest normal ROM and standalone recovery](https://github.com/unicastbg/mi8937-builds/releases/tag/mi8937-23.2-20261015) are in the October release. The [initial release](https://github.com/unicastbg/mi8937-builds/releases/tag/mi8937-23.2-20261008) retains the one-time migration ZIP for phones still on official LineageOS 23.2.
 
 Use the assets in [Releases](https://github.com/unicastbg/mi8937-builds/releases). GitHub's Source code archives are not ROM packages.
 
 - One-time migration: `lineage-23.2-20261008-UNOFFICIAL-Mi8937-migration.zip`.
-- Latest normal ROM: `lineage-23.2-20261010-UNOFFICIAL-Mi8937.zip`.
+- Latest normal ROM: `lineage-23.2-20261015-UNOFFICIAL-Mi8937.zip`.
 - Optional standalone recovery: `recovery.img`, for Mi8937 only.
 - Verify each download against its matching `.sha256` file.
 
@@ -41,7 +41,7 @@ Back up important data first. These instructions are for an existing official 23
 4. Select **Apply update > Apply from ADB** again, then install the latest normal ROM:
 
    ```sh
-   adb sideload lineage-23.2-20261010-UNOFFICIAL-Mi8937.zip
+   adb sideload lineage-23.2-20261015-UNOFFICIAL-Mi8937.zip
    ```
 
 5. Wait for final install status 0, then select **Reboot system now** in recovery. The normal ROM installs community recovery for future updates.
@@ -51,7 +51,7 @@ Back up important data first. These instructions are for an existing official 23
 Do **not** repeat migration. For a manual update, boot recovery with `adb reboot recovery`, select **Apply update > Apply from ADB**, then run:
 
 ```sh
-adb sideload lineage-23.2-20261010-UNOFFICIAL-Mi8937.zip
+adb sideload lineage-23.2-20261015-UNOFFICIAL-Mi8937.zip
 ```
 
 Wait for status 0 and select **Reboot system now**. You can also use the built-in Updater for OTA releases.
@@ -64,7 +64,7 @@ Official recovery may show error 21 for our unfamiliar signing certificate durin
 
 Migration and normal installation tested on an actual Redmi 4X with no data loss. Other Mi8937 models, hardware functions and add-ons are not comprehensively validated. Google Apps, microG and Magisk preservation are not yet confirmed. Keep backups; data preservation is not guaranteed.
 
-The normal ROM points Updater to a [separate Mi8937 feed](https://unicastbg.github.io/mi439-ota/Mi8937-23.2.json), hosted in the existing OTA repository. It now lists the October normal ROM. Tested on an actual Redmi 4X: OTA update works, with no data loss. Future normal releases use Updater without repeating migration.
+The normal ROM points Updater to a [separate Mi8937 feed](https://unicastbg.github.io/mi439-ota/Mi8937-23.2.json), hosted in the existing OTA repository. It lists the latest normal ROM. The October 10 OTA was tested on an actual Redmi 4X and worked with no data loss. The latest October 15 build adds WebView and Bluetooth updates plus short release-note support, but has not yet been phone-tested. Future normal releases use Updater without repeating migration.
 
 Packaging checks passed for ZIP integrity, whole-file OTA signatures, APEX signatures, duplicate-free trusted recovery certificates, recovery installation and absence of an OTA wipe request. Mi8937 upstream disables AVB; no claim of AVB protection is made.
 
